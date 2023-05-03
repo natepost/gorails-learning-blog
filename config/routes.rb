@@ -13,8 +13,13 @@ Rails.application.routes.draw do
   # patch
   # delete
 
+  devise_for :users
+  # devise_for :users do
+  #   delete '/users/sign_out' => 'devise/sessions#destroy'
+  # end
+
   resources :blog_posts
   resources :names
-  
+
   root "blog_posts#index"
 end
