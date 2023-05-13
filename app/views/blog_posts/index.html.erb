@@ -6,6 +6,7 @@ What will you create today!?
 <%= link_to "Write new blog post!", new_blog_post_path %>
 
 <def index>
+<div class="border-8">
     <% @blog_posts.each do |blog_post| %>
     <div>
         <h1><%= link_to blog_post.title, blog_post %></h1>
@@ -13,8 +14,11 @@ What will you create today!?
              <div class="p-2 rounded bg-gray-100 text-gray-900">Draft</div>
           <% elsif blog_post.scheduled? %>
            <div class="p-2 rounded bg-blue-100 text-gray-900">Scheduled</div>
+           <% else blog_post.published? %>
+             <div class="p-2 rounded bg-green-100 text-gray-900">Published!</div>
        <% end %>
         <%= blog_post.body %>
      <% end %>
+    </div>
     </div>
 <end>
