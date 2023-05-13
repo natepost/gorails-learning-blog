@@ -9,7 +9,7 @@ class BlogPost < ApplicationRecord
 
 
     def draft?
-        published_at.nil?
+        published_at.nil? 
     end
 
     def published?
