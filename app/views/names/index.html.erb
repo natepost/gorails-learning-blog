@@ -2,6 +2,14 @@
 
 <h1>Names</h1>
 
+<div class="card">
+  <div data-controller="hello">
+    <input data-hello-target="name" type="text">
+    <button data-action="click->hello#greet">Greet</button>
+  </div>
+  </div>
+
+
 <div id="names">
   <% @names.each do |name| %>
     <%= render name %>

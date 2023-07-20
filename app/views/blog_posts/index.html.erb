@@ -1,7 +1,27 @@
 <h1>Aloha</h1>
 What will you create today!?
 
+  <%
+=begin%>
+ <div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
+  <button data-action="clipboard#copy">Copy to Clipboard</button>
+  </div>
+  <div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="3737" readonly>
+  <button data-action="clipboard#copy">Copy to Clipboard</button>
+</div> 
+<%
+=end%>
 
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="3737" readonly>
+  <a href="#" data-action="clipboard#copy">Copy to Clipboard</a>
+  PIN: <textarea data-clipboard-target="source" readonly>3737</textarea>
+</div>
+
+
+<br />
 
 <%= link_to "Write new blog post!", new_blog_post_path %>
 
